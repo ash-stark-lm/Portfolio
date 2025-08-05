@@ -45,17 +45,21 @@ const RecentProjects = () => {
                   {description}
                 </p>
 
-                <div className="flex justify-between items-start mt-7 mb-3 gap-4 flex-wrap">
-                  {/* ICONS: Wrap left */}
-                  <div className="flex flex-wrap lg:flex-nowrap items-center">
+                <div className="flex items-center justify-between mt-7 mb-3 flex-wrap gap-y-3">
+                  {/* ICONS */}
+                  <div className="flex items-center flex-wrap lg:flex-nowrap max-w-full overflow-hidden">
                     {iconLists.map((icon, index) => (
                       <div
                         key={index}
-                        className="border border-white/[.2] rounded-full bg-black w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center m-1 lg:m-0"
+                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center m-1 lg:m-0"
                         style={{
-                          transform: `translateX(${
-                            index === 0 ? '0' : `-${5 * index + 2}px`
-                          })`,
+                          transform:
+                            typeof window !== 'undefined' &&
+                            window.innerWidth >= 1024
+                              ? `translateX(${
+                                  index === 0 ? '0' : `-${5 * index + 2}px`
+                                })`
+                              : 'none',
                         }}
                       >
                         <img src={icon} alt={`icon-${index}`} className="p-2" />
@@ -63,6 +67,7 @@ const RecentProjects = () => {
                     ))}
                   </div>
 
+                  {/* VISIT BUTTON */}
                   <div className="flex justify-center items-center">
                     <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                       Visit
