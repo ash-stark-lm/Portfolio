@@ -1178,53 +1178,6 @@ function SplashCursor({
       updatePointerMoveData(pointer, posX, posY, color)
     })
 
-    document.body.addEventListener(
-      'touchstart',
-      function handleFirstTouchStart(e) {
-        const touches = e.targetTouches
-        let pointer = pointers[0]
-        for (let i = 0; i < touches.length; i++) {
-          let posX = scaleByPixelRatio(touches[i].clientX)
-          let posY = scaleByPixelRatio(touches[i].clientY)
-          updateFrame() // start animation loop
-          updatePointerDownData(pointer, touches[i].identifier, posX, posY)
-        }
-        document.body.removeEventListener('touchstart', handleFirstTouchStart)
-      }
-    )
-
-    window.addEventListener('touchstart', (e) => {
-      const touches = e.targetTouches
-      let pointer = pointers[0]
-      for (let i = 0; i < touches.length; i++) {
-        let posX = scaleByPixelRatio(touches[i].clientX)
-        let posY = scaleByPixelRatio(touches[i].clientY)
-        updatePointerDownData(pointer, touches[i].identifier, posX, posY)
-      }
-    })
-
-    window.addEventListener(
-      'touchmove',
-      (e) => {
-        const touches = e.targetTouches
-        let pointer = pointers[0]
-        for (let i = 0; i < touches.length; i++) {
-          let posX = scaleByPixelRatio(touches[i].clientX)
-          let posY = scaleByPixelRatio(touches[i].clientY)
-          updatePointerMoveData(pointer, posX, posY, pointer.color)
-        }
-      },
-      false
-    )
-
-    window.addEventListener('touchend', (e) => {
-      const touches = e.changedTouches
-      let pointer = pointers[0]
-      for (let i = 0; i < touches.length; i++) {
-        updatePointerUpData(pointer)
-      }
-    })
-
     updateFrame()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
