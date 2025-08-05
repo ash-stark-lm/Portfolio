@@ -45,17 +45,20 @@ const RecentProjects = () => {
                   {description}
                 </p>
 
-                <div className="flex items-center justify-between mt-7 mb-3">
-                  <div className="flex items-center">
+                <div className="flex justify-between items-start mt-7 mb-3 gap-4 flex-wrap">
+                  {/* ICONS: Wrap left */}
+                  <div className="flex flex-wrap lg:flex-nowrap items-center">
                     {iconLists.map((icon, index) => (
                       <div
                         key={index}
-                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                        className="border border-white/[.2] rounded-full bg-black w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center m-1 lg:m-0"
                         style={{
-                          transform: `translateX(-${5 * index + 2}px)`,
+                          transform: `translateX(${
+                            index === 0 ? '0' : `-${5 * index + 2}px`
+                          })`,
                         }}
                       >
-                        <img src={icon} alt="icon5" className="p-2" />
+                        <img src={icon} alt={`icon-${index}`} className="p-2" />
                       </div>
                     ))}
                   </div>
