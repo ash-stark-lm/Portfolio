@@ -1,4 +1,5 @@
 import { useGSAP } from '@gsap/react'
+import React from 'react'
 import gsap from 'gsap'
 import Button from '../components/Button'
 import { words } from '../constants'
@@ -71,4 +72,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default React.memo(Hero)

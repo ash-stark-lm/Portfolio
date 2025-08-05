@@ -1,4 +1,5 @@
-import { abilities } from "../constants";
+import React from 'react'
+import { abilities } from '../constants'
 
 const FeatureCards = () => (
   <div className="w-full padding-x-lg">
@@ -17,6 +18,6 @@ const FeatureCards = () => (
       ))}
     </div>
   </div>
-);
+)
 
-export default FeatureCards;
+export default React.memo(FeatureCards)

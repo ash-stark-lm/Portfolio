@@ -1,5 +1,4 @@
-'use client'
-
+import React from 'react'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { logoIconsList } from '../constants'
@@ -54,4 +53,4 @@ const LogoShowcase = () => {
   )
 }
 
-export default LogoShowcase
+export default React.memo(LogoShowcase)

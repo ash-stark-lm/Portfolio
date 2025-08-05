@@ -1,3 +1,4 @@
+import React from 'react'
 import { BentoGrid, BentoGridItem } from '../components/ui/BentoGrid'
 import { gridItems } from '../constants'
 
@@ -28,4 +29,4 @@ const Grid = () => {
     </section>
   )
 }
-export default Grid
+export default React.memo(Grid)

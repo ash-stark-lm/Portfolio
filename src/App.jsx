@@ -17,6 +17,7 @@ import Approach from './components/Approach'
 import { LampDemo } from './sections/Skills'
 import Lenis from 'lenis'
 import { useEffect } from 'react'
+import { SplashCursor } from './components/ui/SplashCursor'
 
 const App = () => {
   // 💨 Lenis Setup
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <SplashCursor />
       <Hero />
       {/**add new bento grid */}
       <Grid />
@@ -49,7 +51,6 @@ const App = () => {
       <FeatureCards />
       <Experience />
       <TechStack />
-      <Testimonials />
 
       <Contact />
       <Footer />

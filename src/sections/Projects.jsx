@@ -1,7 +1,7 @@
 import { projects } from '../constants'
 import { Navigation } from 'lucide-react'
 import { PinContainer, PinPerspective } from '../components/ui/3dAnimatedPin'
-
+import React from 'react'
 const RecentProjects = () => {
   return (
     <section id="projects">
@@ -62,7 +62,7 @@ const RecentProjects = () => {
 
                   <div className="flex justify-center items-center">
                     <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                      Check Live Site
+                      Visit
                     </p>
                     <Navigation className="ms-3" color="#CBACF9" />
                   </div>
@@ -76,4 +76,4 @@ const RecentProjects = () => {
   )
 }
 
-export default RecentProjects
+export default React.memo(RecentProjects)

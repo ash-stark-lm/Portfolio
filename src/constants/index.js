@@ -17,10 +17,7 @@ const navLinks = [
     name: 'Skills',
     link: '#skills',
   },
-  {
-    name: 'Testimonials',
-    link: '#testimonials',
-  },
+
   {
     name: 'Contact',
     link: '#contact',
@@ -89,7 +86,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: 'Currently building a JS Animation library',
+    title: 'Currently building a realtime-chat App',
     description: 'The Inside Scoop',
     className: 'md:col-span-3 md:row-span-2',
     imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
@@ -112,59 +109,42 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: '3D Solar System Planets to Explore',
-    des: 'Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.',
-    img: '/images/p1.svg',
+    title: 'CodeAsh - Coding Platform',
+    description:
+      'A full-stack coding platform with real-time code execution, AI-powered assistance.',
+    img: '/images/Image.png',
     iconLists: [
       '/images/re.svg',
       '/images/tail.svg',
-      '/images/ts.svg',
-      '/images/three.svg',
-      '/images/fm.svg',
+      '/images/logos/js.svg',
+      '/images/logos/framer.png',
+      '/images/logos/express.svg',
+      '/images/logos/node.png',
+      '/images/logos/mongodb.svg',
+      '/images/logos/redis.svg',
+      '/images/logos/docker.svg',
+      '/images/logos/aws.png',
+      '/images/logos/nginx.svg',
     ],
-    link: '/ui.earth.com',
+    link: 'https://codeash.site',
   },
   {
     id: 2,
-    title: 'Yoom - Video Conferencing App',
-    des: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
-    img: '/images/p2.svg',
-    iconLists: [
-      '/images/next.svg',
-      '/images/tail.svg',
-      '/images/ts.svg',
-      '/images/stream.svg',
-      '/images/c.svg',
-    ],
-    link: '/ui.yoom.com',
-  },
-  {
-    id: 3,
-    title: 'AI Image SaaS - Canva Application',
-    des: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
-    img: '/images/p3.svg',
+    title: 'Food Delivery Website',
+    description:
+      'A responsive food delivery app with secure payments, real-time tracking, and admin-user role management.',
+    img: '/images/Food.png',
     iconLists: [
       '/images/re.svg',
-      '/images/tail.svg',
-      '/images/ts.svg',
-      '/images/three.svg',
-      '/images/c.svg',
+
+      '/images/logos/js.svg',
+
+      '/images/logos/express.svg',
+      '/images/logos/node.png',
+      '/images/logos/mongodb.svg',
+      '/images/logos/redis.svg',
     ],
-    link: '/ui.aiimg.com',
-  },
-  {
-    id: 4,
-    title: 'Animated Apple Iphone 3D Website',
-    des: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..',
-    img: '/images/p4.svg',
-    iconLists: [
-      '/images/next.svg',
-      '/images/tail.svg',
-      '/images/ts.svg',
-      '/images/three.svg',
-      '/images/gsap.svg',
-    ],
-    link: '/ui.apple.com',
+    link: 'https://github.com/ash-stark-lm/Food-Delivery-Website-Tomato-',
   },
 ]
 
@@ -219,6 +199,9 @@ const logoIconsList = [
   {
     imgPath: '/images/logos/socket.svg',
   },
+  {
+    imgPath: '/images/logos/nginx.svg',
+  },
 ]
 
 const abilities = [
@@ -266,12 +249,7 @@ const techStackIcons = [
     scale: 1,
     rotation: [0, 0, 0],
   },
-  {
-    name: 'Python Developer',
-    modelPath: '/models/python-transformed.glb',
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
+
   {
     name: 'Backend Developer',
     modelPath: '/models/node-transformed.glb',
@@ -284,28 +262,17 @@ const techStackIcons = [
     scale: 0.05,
     rotation: [0, 0, 0],
   },
-  {
-    name: 'Git Manager',
-    modelPath: '/models/git-svg-transformed.glb',
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
-  {
-    name: 'JavaScript',
-    modelPath: '/images/logos/Js.svg', // this will trigger the <img> render
 
-    rotation: [0, -Math.PI / 4, 0],
-  },
-  {
-    name: 'MongoDB',
-    modelPath: '/images/logos/MONGODB.svg', // this will trigger the <img> render
-
-    rotation: [0, -Math.PI / 4, 0],
-  },
   {
     name: 'Docker',
     modelPath: '/images/logos/docker.svg', // this will trigger the <img> render
 
+    rotation: [0, -Math.PI / 4, 0],
+  },
+  {
+    name: 'AWS',
+    modelPath: '/images/logos/aws.png',
+    scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
 ]
@@ -313,41 +280,28 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      'Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.',
+      'Ashish’s work on PLUTO’s influencer interaction platform was exceptional. He seamlessly integrated advanced LLMs and real-time chat features with a strong full-stack foundation.',
     imgPath: '/images/exp1.png',
-    logoPath: '/images/logo1.png',
-    title: 'Frontend Developer',
-    date: 'January 2023 - Present',
-    responsibilities: [
-      'Developed and maintained user-facing features for the Hostinger website.',
-      'Collaborated closely with UI/UX designers to ensure seamless user experiences.',
-      'Optimized web applications for maximum speed and scalability.',
-    ],
-  },
-  {
-    review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: '/images/exp2.png',
-    logoPath: '/images/logo2.png',
+    logoPath: '/images/logos/react.png',
     title: 'Full Stack Developer',
-    date: 'June 2020 - December 2023',
+    date: 'May 2024 - July 2024 ',
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      'Worked with backend engineers to integrate APIs seamlessly with the frontend.',
-      'Contributed to open-source projects that were used with the Docker ecosystem.',
+      'Developed a full-stack web platform and WhatsApp chatbot simulating influencer interactions using React and Node.js.',
+      'Integrated backend with a custom Large Language Model (LLM) to generate contextual, dynamic responses.',
+      'Designed scalable system architecture and responsive UI for a next-gen influencer marketing platform.',
     ],
   },
   {
     review:
-      'Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.',
-    imgPath: '/images/exp3.png',
-    logoPath: '/images/logo3.png',
-    title: 'React Native Developer',
-    date: 'March 2019 - May 2020',
+      'Ashish’s contributions to TechLuminaar web applications have been outstanding. He approaches challenges with a problem-solving mindset.',
+    imgPath: '/images/exp2.png',
+    logoPath: '/images/logos/node.png',
+    title: 'SDE Intern',
+    date: 'January 2024 - April 2024',
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      'Improved app performance and user experience through code optimization and testing.',
-      'Coordinated with the product team to implement features based on feedback.',
+      'Built a scalable Doubtnut-like platform using React.js and Node.js, acquiring 500+ users in the first month.',
+      'Developed RESTful APIs for interactive learning modules and quizzes.',
+      'Enhanced quiz features to boost engagement, increasing course completion rates by 40%.',
     ],
   },
 ]
@@ -414,20 +368,14 @@ const testimonials = [
 
 const socialImgs = [
   {
-    name: 'insta',
-    imgPath: '/images/insta.png',
-  },
-  {
-    name: 'fb',
-    imgPath: '/images/fb.png',
-  },
-  {
-    name: 'x',
-    imgPath: '/images/x.png',
+    name: 'github',
+    imgPath: '/images/github.png',
+    link: 'https://github.com/ash-stark-lm',
   },
   {
     name: 'linkedin',
     imgPath: '/images/linkedin.png',
+    link: 'https://www.linkedin.com/in/ashish-kumar-603b74237/',
   },
 ]
 
