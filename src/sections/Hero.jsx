@@ -1,21 +1,57 @@
+import React, { useLayoutEffect, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
-import React from 'react'
 import gsap from 'gsap'
 import Button from '../components/Button'
 import { words } from '../constants'
 import HeroExperience from '../components/models/hero_models/HeroExperience'
 
 const Hero = () => {
+  const heroRef = useRef(null)
+
   useGSAP(() => {
-    gsap.fromTo(
-      '.hero-text h1',
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' }
-    )
-  })
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ delay: 1 })
+
+      tl.fromTo(
+        '.hero-text h1',
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: 'power2.inOut',
+        }
+      )
+        .fromTo(
+          '.hero-description',
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power2.out',
+          },
+          '-=0.6' // starts slightly before heading animation ends
+        )
+        .fromTo(
+          '.hero-button',
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power2.out',
+          },
+          '-=0.5' // starts slightly before p tag animation ends
+        )
+    }, heroRef)
+
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <section id="hero" className="relative overflow-hidden">
+    <section id="hero" ref={heroRef} className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="" />
       </div>
@@ -49,13 +85,13 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p className="hero-description text-white-50 md:text-xl relative z-10 pointer-events-none">
               Hi, I’m Ashish, a Full Stack Developer with a passion for code.
             </p>
 
             <Button
               text="See My Work"
-              className="md:w-80 md:h-16 w-60 h-12"
+              className="hero-button md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />
           </div>
