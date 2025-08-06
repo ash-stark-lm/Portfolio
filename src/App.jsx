@@ -17,6 +17,7 @@ import Approach from './components/Approach'
 import { LampDemo } from './sections/Skills'
 import Lenis from 'lenis'
 import { useEffect } from 'react'
+import Collaborate from './sections/Collaborate'
 
 const App = () => {
   // 💨 Lenis Setup
@@ -50,7 +51,7 @@ const App = () => {
       <FeatureCards />
       <Experience />
       <TechStack />
-
+      <Collaborate />
       <Contact />
       <Footer />
       <ToastContainer
