@@ -37,7 +37,7 @@ const Collaborate = () => {
   }, [])
   return (
     <div className="container   flex items-center  h-[100vh] bg-amber-400 mt-20 rounded-2xl overflow-hidden">
-      <h1 className=" text-black uppercase  text-[60vw] sm:text-[40vw] md:text-[4vw] lg:text-[40vw] xl:text-[40vw] leading-none">
+      <h1 className=" text-black uppercase  text-[60vw] sm:text-[40vw] md:text-[40vw] lg:text-[40vw] xl:text-[40vw] leading-none">
         Collaborate
       </h1>
     </div>
