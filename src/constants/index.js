@@ -146,6 +146,19 @@ export const projects = [
     ],
     link: 'https://github.com/ash-stark-lm/Food-Delivery-Website-Tomato-',
   },
+  {
+    id: 3,
+    title: 'GTA VI Landing Page',
+    description:
+      'GTA VI landing page built with GSAP for modern web animations.',
+    img: '/images/Project-GTA.png',
+    iconLists: [
+      '/images/re.svg',
+      '/images/logos/js.svg',
+      '/images/logos/gsapold.png',
+    ],
+    link: 'https://gta-vi-landing-page-ashish.vercel.app/',
+  },
 ]
 
 const logoIconsList = [
